@@ -1,0 +1,6 @@
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description, placeholder: "Infusion of orange with rum", input_html: { maxlength: 22 } %>
+  <%= f.association :ingredient%>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<% random = rand(1..4) %>
+<% i = 0 %>
+<% loop do  %>
+<%= content_tag(:i, "", class: ["fas fa-star "]) %>
+<% i += 1 %>
+<% if i == random %>
+  <% break %>
+  <% end %>
+<% end %>
