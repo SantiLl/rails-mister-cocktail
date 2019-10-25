@@ -14,7 +14,11 @@
           <div class="card-trip-infos">
             <div>
               <h2 class=><%= cocktail.name %> <%= link_to content_tag(:i, "", class: ["fas fa-cocktail"]), cocktail_path(cocktail.id) %></h2>
-              <p><%= cocktail.doses.first.description %></p>
+              <% if cocktail.doses.first != nil %>
+                <p><%= cocktail.doses.first.description %></p>
+              <% else %>
+                <p>Description not included</p>
+              <% end %>
             </div>
             <h2 class="card-trip-rating"><%= render 'randomrating' %></h2>
           </div>
