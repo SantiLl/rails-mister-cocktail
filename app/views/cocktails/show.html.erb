@@ -12,5 +12,7 @@
     </ul>
   <% end %>
 
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
   <%= link_to "Back to homepage", cocktails_path %>
   <%= link_to "Add dose info", new_cocktail_dose_path(@cocktail) %>
